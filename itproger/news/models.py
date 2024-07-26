@@ -2,14 +2,18 @@ from django.db import models
 
 
 class Articles(models.Model):
-    title = models.CharField('Название', max_length=50)
-    anons = models.CharField('Анонс', max_length=250)
-    full_text = models.TextField('Статья')
-    date = models.DateTimeField('Дата публикации')
+    objects = None
+    title = models.CharField('Վերնագիր', max_length=50)
+    anons = models.CharField('Հայտարարություն', max_length=250)
+    full_text = models.TextField('Հոդված')
+    date = models.DateTimeField('Հրապարակման ամսաթիվը')
 
     def __str__(self):
         return self.title
 
+    def get_absolute_url(self):
+        return f'/news/{self.id}'
+
     class Meta:
-        verbose_name = 'Новость'
-        verbose_name_plural = 'Новости'
+        verbose_name = 'Հոդված'
+        verbose_name_plural = 'Լուրեր'

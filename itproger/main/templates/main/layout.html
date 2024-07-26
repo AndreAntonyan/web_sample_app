@@ -1,6 +1,6 @@
 {% load static %}
 <!doctype html>
-<html lang="ru">
+<html lang="ru" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -13,14 +13,14 @@
 </head>
 <body>
     <aside>
-        <img src="{% static 'main/img/logo_simple.svg' %}" alt="Лого">
-        <span class="logo">itProger</span>
-        <h3>Навигация</h3>
+        <img src="{% static 'main/img/armath_logo.png' %}" alt="Лого">
+        <h3>Նավիգացիա</h3>
         <ul>
-            <a href="{% url 'home' %}"><li><i class="fas fa-home"></i>Главная</li></a>
-            <a href="{% url 'about' %}"><li><i class="fas fa-address-card"></i>Про нас</li></a>
-            <a href="{% url 'news_home' %}"><li><i class="fa fa-newspaper-o"></i>Новости</li></a>
-            <a href=""><li><i class="fa fa-paper-plane"></i>Контакты</li></a>
+            <a href="{% url 'home' %}"><li><i class="fas fa-home"></i>Գլխավոր էջ</li></a>
+            <a href="{% url 'about' %}"><li><i class="fas fa-address-card"></i>Մեր մասին</li></a>
+            <a href="{% url 'news_home' %}"><li><i class="fas fa-newspaper"></i>Նորություններ</li></a>
+            <a href="{}"><li><i class="fa fa-paper-plane"></i>Կոնտակտներ</li></a>
+            <a href="{% url 'create'  %}"><li><button class="btn btn-info"><i class="fa fa-plus-circle"></i>Ավելացնել գրառումներ</button></li></a>
         </ul>
     </aside>
     <main>
