@@ -8,6 +8,16 @@ def index(request):
 
 
 def about(request):
-    return render(request, 'main/about.html')
+    data = {
+        'title': 'Մեր մասին',
+    }
+    return render(request, 'main/about.html', data)
+
+
+def contacts(request):
+    data = {
+        'title': 'Կոնտակտներ',
+    }
+    return render(request, 'main/contacts.html', data)
 
 
