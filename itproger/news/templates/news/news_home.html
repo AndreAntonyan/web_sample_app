@@ -14,7 +14,7 @@
             </div>
             {%endfor%}
         {% else %}
-            <p>Նորություններ չկան։</p><button class="btn btn-danger">Կոնտակտներ</button></a>
+            <p>Նորություններ չկան։</p><a href="{% url 'contacts' %}"><button class="btn btn-danger">Կոնտակտներ</button></a>
         {% endif %}
 
         {# Комментарий #}
